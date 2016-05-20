@@ -1,11 +1,15 @@
-<div id='container'>
-  <img src='/redirect_icon.png'/>
-  <div class='info'>
-    <div class='visits'><span class='count' ng-model = 'link.visits'>{{visits}}</span>Visits</div>
-    <div class='title' ng-model = 'link.title'>{{title}}</div>
-    <div class='original' ng-model = 'link.url'>{{url}}</div>
-    <a href='{{baseUrl}}/{{code}}' ng-model = 'link.code'>{{baseUrl}}/{{code}}</a>
-  </div>
+<div id='container' ng-controller='LinksController'>
+ <ul>
+    <li ng-repeat = 'link in data.links'>
+      <img src='../assets/redirect_icon.png'/>
+      <div class='info'>
+        <div class='visits'><span class='count' ng-model = 'link.visits'>{{visits}}</span>Visits</div>
+        <div class='title' ng-model = 'link.title'>{{title}}</div>
+        <div class='original' ng-model = 'link.url'>{{url}}</div>
+        <a href='{{baseUrl}}/{{code}}' ng-model = 'link.code'>{{baseUrl}}/{{code}}</a>
+      </div>
+    </li>
+  </ul>
 </div>
 
 <!-- <script id='link' type='text/x-handlebars-template'>
