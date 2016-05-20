@@ -8,6 +8,9 @@ angular.module('shortly.links', [])
       .then(function(data) {
         console.log('This is the data from getAll', data);
         $scope.data.links = data;
+      })
+      .catch(function(error) {
+        console.error(error);
       });
   };
 
