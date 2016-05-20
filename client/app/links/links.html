@@ -1,3 +1,19 @@
 <div id='container'>
-  <!-- Your html here -->
+  <img src='/redirect_icon.png'/>
+  <div class='info'>
+    <div class='visits'><span class='count' ng-model = 'link.visits'>{{visits}}</span>Visits</div>
+    <div class='title' ng-model = 'link.title'>{{title}}</div>
+    <div class='original' ng-model = 'link.url'>{{url}}</div>
+    <a href='{{baseUrl}}/{{code}}' ng-model = 'link.code'>{{baseUrl}}/{{code}}</a>
+  </div>
 </div>
+
+<!-- <script id='link' type='text/x-handlebars-template'>
+  <img src='/redirect_icon.png'/>
+  <div class='info'>
+    <div class='visits'><span class='count'>{{visits}}</span>Visits</div>
+    <div class='title'>{{title}}</div>
+    <div class='original'>{{url}}</div>
+    <a href='{{baseUrl}}/{{code}}'>{{baseUrl}}/{{code}}</a>
+  </div>
+</script> -->
