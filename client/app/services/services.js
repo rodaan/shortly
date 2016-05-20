@@ -8,14 +8,20 @@ angular.module('shortly.services', [])
       url: '/api/links'
     })
     .then(function(resp) {
-      console.log('This is the GET resp', resp.data);
       return resp.data;
     });
 
   };
 
   var addOne = function(url) {
-
+    return $http({
+      method: 'POST',
+      url: '/api/links',
+      data: url
+    })
+    .then(function(resp) {
+      return resp;
+    });
   };
 
 
