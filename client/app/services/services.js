@@ -24,6 +24,10 @@ angular.module('shortly.services', [])
     });
   };
 
+  // var isValidUrl = function (url) {
+  //   return url.match(rValidUrl);
+  // };
+
   return {
     getAll: getAll,
     addOne: addOne

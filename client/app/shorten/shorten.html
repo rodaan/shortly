@@ -1,4 +1,12 @@
 <div id='container' ng-controller='ShortenController'>
+ <div class='navigation'>
+      <ul>
+        <li><a href='#links' class='index'>All Links</a></li>
+        <li><a href='#shorten' class='create'>Shorten</a></li>
+        <li><a href='#logout' class='logout'>Logout</a></li>
+      </ul>
+    </div>
+    <div id='container'></div>
   <form ng-submit ='addLink()' name ='shorten'>
       <input class='text' ng-model='link.url' type='url'required name='url'>
       <div role = "alert">

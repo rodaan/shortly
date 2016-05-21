@@ -1,6 +1,14 @@
 <div id='container' ng-controller='LinksController'>
+<div class='navigation'>
+  <ul>
+    <li><a href='#links' class='index'>All Links</a></li>
+    <li><a href='#shorten' class='create'>Shorten</a></li>
+    <li><a href='#logout' class='logout'>Logout</a></li>
+  </ul>
+    </div>
+    <div id='container'></div>
  <ul>
-    <li ng-repeat = 'link in data.links'>
+    <li ng-repeat = "link in data.links | orderBy:'-visits'">
       <img src='../assets/redirect_icon.png'/>
       <div class='info'>
         <div class='visits'><span class='count' ng-model = 'link.visits'>{{link.visits}}</span> Visits</div>
