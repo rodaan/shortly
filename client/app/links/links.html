@@ -1,4 +1,4 @@
-<div id='container' ng-controller='LinksController'>
+<div class='container-fluid'id='container' ng-controller='LinksController'>
  <nav class='navbar navbar-default'>
    <div class='container-fluid'>
       <!-- Logo -->
@@ -11,27 +11,28 @@
  </nav>
 
     <div id='container'>
-      <input ng-model='search.$' placeholder='Filter'>
+      <input class='form-control' ng-model='search.$' placeholder='Filter'>
     </div>
  <ul>
     <li ng-repeat = "link in data.links | orderBy:'-visits' | filter:search:strict">
-      <img src='../assets/redirect_icon.png'/>
-      <div class='info'>
-        <div class='visits'><span class='count' ng-model = 'link.visits'>{{link.visits}}</span> Visits</div>
-        <div class='title' ng-model = 'link.title'>{{link.title}}</div>
-        <div class='original' ng-model = 'link.url'>{{link.url}}</div>
-        <a href='{{link.baseUrl}}/{{link.code}}' ng-model = 'link.code'>{{link.baseUrl}}/{{link.code}}</a>
+  
+
+      <div class ='.col-sm-6 .col-lg-8'>
+        <!-- <img src ='../assets/redirect_icon.png' class = 'linkIcon'/> -->
+        <span class='glyphicon glyphicon-globe' aria-hidden="true"></span>
+        <div class='info'>
+          <div class='title' ng-model = 'link.title'>{{link.title}}</div>
+          <div class='original' ng-model = 'link.url'>{{link.url}}</div>
+          <a href='{{link.baseUrl}}/{{link.code}}' ng-model = 'link.code'>{{link.baseUrl}}/{{link.code}}</a>
+        </div>
       </div>
+        
+        <div class='.col-lg-4'>
+          <div class='visits'><span class='count' ng-model = 'link.visits'>{{link.visits}}</span> Visits</div>
+        </div>
+
+
+
     </li>
   </ul>
 </div>
-
-<!-- <script id='link' type='text/x-handlebars-template'>
-  <img src='/redirect_icon.png'/>
-  <div class='info'>
-    <div class='visits'><span class='count'>{{visits}}</span>Visits</div>
-    <div class='title'>{{title}}</div>
-    <div class='original'>{{url}}</div>
-    <a href='{{baseUrl}}/{{code}}'>{{baseUrl}}/{{code}}</a>
-  </div>
-</script> -->

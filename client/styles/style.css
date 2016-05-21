@@ -1,15 +1,45 @@
 body {
-  margin: 6px;
+  margin: 20px;
   background: #e9ebed;
   font-family: 'Lato', sans-serif;
+}
+
+ul {
+  padding-left: 4px;
 }
 li {
   list-style: none;
 }
 
+.form-control {
+  max-width: 350px;
+  margin-bottom: 10px;
+}
 
+.form-control:focus {
+  border-color: #73938c;
+}
+
+div .visits, .linkIcon, .info {
+  display: inline-block;
+}  
+.linkIcon{
+  vertical-align: top; 
+  padding-top: 10px; 
+  padding-right: 9px  ;
+}
+.info {
+  width: 80%;
+}
+/*.visits { 
+  float: right;
+}*/
+.header {
+  color: #465f59;
+}
 .title {
   color: #465f59;
+  font-size: 18px;
 }
 .btn-primary {
   margin-top: 5px;
@@ -22,5 +52,4 @@ li {
 
 .navbar-default .navbar-brand:hover {
   color: #465f59;
-  text-shadow: 1px 1px #141b19;
 }
