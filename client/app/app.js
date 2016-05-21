@@ -58,7 +58,7 @@ angular.module('shortly', [
   $rootScope.$on('$routeChangeStart', function (evt, next, current) {
     console.log('this is next', next);
     // next.$$route && next.$$route.authenticate &&
-    if (next.$$route && !Auth.isAuth()) {
+    if ((next.$$route.templateUrl !== 'app/auth/signup.html') && !Auth.isAuth()) {
       $location.path('/signin');
     }
    

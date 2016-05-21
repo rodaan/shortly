@@ -6,9 +6,11 @@
     <li><a href='#logout' class='logout'>Logout</a></li>
   </ul>
     </div>
-    <div id='container'></div>
+    <div id='container'>
+      <input ng-model='search.$' placeholder='Filter'>
+    </div>
  <ul>
-    <li ng-repeat = "link in data.links | orderBy:'-visits'">
+    <li ng-repeat = "link in data.links | orderBy:'-visits' | filter:search:strict">
       <img src='../assets/redirect_icon.png'/>
       <div class='info'>
         <div class='visits'><span class='count' ng-model = 'link.visits'>{{link.visits}}</span> Visits</div>
