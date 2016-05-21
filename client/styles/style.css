@@ -6,8 +6,10 @@ body {
 li {
   list-style: none;
 }
+
+
 .title {
-  color: #293f50;
+  color: #465f59;
 }
 .btn-primary {
   margin-top: 5px;
@@ -18,3 +20,7 @@ li {
   background-color: #73938c;
 }
 
+.navbar-default .navbar-brand:hover {
+  color: #465f59;
+  text-shadow: 1px 1px #141b19;
+}
