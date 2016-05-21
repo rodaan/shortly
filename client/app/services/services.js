@@ -16,9 +16,10 @@ angular.module('shortly.services', [])
     return $http({
       method: 'POST',
       url: '/api/links',
-      data: url
+      data: JSON.stringify(url)
     })
     .then(function(resp) {
+      console.log(resp);
       return resp;
     });
   };

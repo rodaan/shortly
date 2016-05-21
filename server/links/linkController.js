@@ -21,6 +21,7 @@ module.exports = {
 
   newLink: function (req, res, next) {
     var url = req.body.url;
+    console.log("this is the req.body.url from the client", req.body.url);
     if (!util.isValidUrl(url)) {
       return next(new Error('Not a valid url'));
     }

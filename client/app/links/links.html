@@ -3,10 +3,10 @@
     <li ng-repeat = 'link in data.links'>
       <img src='../assets/redirect_icon.png'/>
       <div class='info'>
-        <div class='visits'><span class='count' ng-model = 'link.visits'>{{visits}}</span>Visits</div>
-        <div class='title' ng-model = 'link.title'>{{title}}</div>
-        <div class='original' ng-model = 'link.url'>{{url}}</div>
-        <a href='{{baseUrl}}/{{code}}' ng-model = 'link.code'>{{baseUrl}}/{{code}}</a>
+        <div class='visits'><span class='count' ng-model = 'link.visits'>{{link.visits}}</span> Visits</div>
+        <div class='title' ng-model = 'link.title'>{{link.title}}</div>
+        <div class='original' ng-model = 'link.url'>{{link.url}}</div>
+        <a href='{{link.baseUrl}}/{{link.code}}' ng-model = 'link.code'>{{link.baseUrl}}/{{link.code}}</a>
       </div>
     </li>
   </ul>
