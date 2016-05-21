@@ -62,4 +62,11 @@ angular.module('shortly', [
       $location.path('/signin');
     }
   });
+  $rootScope.$on('$routeChangeError', function(evt, next, current) {
+    if (Auth.isAuth()) {
+      $location.path('/links');
+    } else {
+      $location.path('/signin');
+    }
+  });
 });

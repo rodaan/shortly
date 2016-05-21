@@ -1,6 +1,14 @@
 <div id='container' ng-controller='ShortenController'>
-  <form ng-submit ='addLink()'>
-      <input class='text' ng-model='link.url' type='text' name='url'>
+  <form ng-submit ='addLink()' name ='shorten'>
+      <input class='text' ng-model='link.url' type='url'required name='url'>
+      <div role = "alert">
+        <span class='error' ng-show='shorten.input.$error.required'>
+          Required!
+        </span>
+        <span class='error' ng-show='shorten.input.$error.url'>
+          Not valid url!
+        </span>
+      </div>
       <button>Shorten</button>
   </form>
   <img class='spinner' src='../assets/spiffygif_46x46.gif'>
