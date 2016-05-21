@@ -1,11 +1,26 @@
 <div id='container' ng-controller='ShortenController'>
- <div class='navigation'>
-      <ul>
-        <li><a href='#links' class='index'>All Links</a></li>
-        <li><a href='#shorten' class='create'>Shorten</a></li>
-        <li><a href='#logout' class='logout'>Logout</a></li>
-      </ul>
+ <nav class='navbar navbar-default'>
+   <div class='container-fluid'>
+      <!-- Logo -->
+      <div class='navbar-header'>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Shortly</a>
+      </div>
+
+      <div class='collapse navbar-collapse'>
+        <ul class='nav navbar-nav'>
+          <li><a href='#links' class='index'>All Links</a></li>
+          <li><a href='#shorten' class='create'>Shorten</a></li>
+          <li><a href='#logout' class='logout'>Logout</a></li>
+        </ul>
+      </div>
     </div>
+ </nav>
     <div id='container'></div>
   <form ng-submit ='addLink()' name ='shorten'>
       <input class='text' ng-model='link.url' type='url'required name='url'>
@@ -17,10 +32,10 @@
           Not valid url!
         </span>
       </div>
-      <button>Shorten</button>
+      <button ng-model='submit' ng-click='submitting()'>Shorten</button>
   </form>
-  <img class='spinner' src='../assets/spiffygif_46x46.gif'>
-  <div class='message'></div>
+  <img class='spinner' ng-show='showMessage' src='../assets/spiffygif_46x46.gif'>
+  <div class='message' ng-show='showMessage' >Shortening Link</div>
 
 </div>
 
