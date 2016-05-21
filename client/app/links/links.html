@@ -19,7 +19,7 @@
 
       <div class ='.col-sm-6 .col-lg-8'>
         <!-- <img src ='../assets/redirect_icon.png' class = 'linkIcon'/> -->
-        <span class='glyphicon glyphicon-globe' aria-hidden="true"></span>
+        <a href='{{link.baseUrl}}/{{link.code}}' ng-model = 'link.code'><span class='glyphicon glyphicon-globe linkIcon' aria-hidden="true"></span></a>
         <div class='info'>
           <div class='title' ng-model = 'link.title'>{{link.title}}</div>
           <div class='original' ng-model = 'link.url'>{{link.url}}</div>
