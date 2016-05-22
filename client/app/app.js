@@ -3,10 +3,15 @@ angular.module('shortly', [
   'shortly.links',
   'shortly.shorten',
   'shortly.auth',
+  'shortly.analytics',
   'ngRoute'
 ])
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
+    .when('/analytics', {
+      templateUrl: 'app/analytics/analytics.html',
+      controller: 'AnalyticsController'
+    })
     .when('/signin', {
       templateUrl: 'app/auth/signin.html',
       controller: 'AuthController'

@@ -10,20 +10,13 @@
   <body>
     <h1 class='header'>Shortly</h1>
 
-    <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
-    <!-- <div class='navigation'>
-      <ul>
-        <li><a href='#links' class='index'>All Links</a></li>
-        <li><a href='#shorten' class='create'>Shorten</a></li>
-        <li><a href='#logout' class='logout'>Logout</a></li>
-      </ul>
-    </div>
-    <div id='container'></div> -->
     <div ng-view></div>
 
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
-
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    
+    <script src="app/analytics/analytics.js"></script>
     <script src="app/auth/auth.js"></script>
     <script src="app/links/links.js"></script>
     <script src="app/shorten/shorten.js"></script>
